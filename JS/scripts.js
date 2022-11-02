@@ -1,5 +1,10 @@
+
+function game(){
+
+    for (let i = 0; i < 5; i++){
+
 let playerSelection = prompt("what is your choice");
-playerSelection = playerSelection.toLowerCase();
+    playerSelection = playerSelection.toLowerCase();
 
 let computerSelection = getComputerChoice(); 
 
@@ -22,8 +27,6 @@ function getComputerChoice(){
     }
 }
 
-
-function game(){
     
 function playRound(playerSelection, computerSelection){
     if (playerSelection == 'rock' && computerSelection == 'paper'){
@@ -52,6 +55,7 @@ function playRound(playerSelection, computerSelection){
 
 console.log(playRound(playerSelection, computerSelection));
 
+}
 }
 
 game();
