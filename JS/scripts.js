@@ -1,3 +1,5 @@
+let computerPoints = 0;
+let playerPoints = 0; 
 
 function game(){
 
@@ -33,7 +35,7 @@ function playRound(playerSelection, computerSelection){
         return 'you lose! paper beats rock';
     }
     else if (playerSelection == 'rock' && computerSelection == 'scissors'){
-        return 'you Win! rock beats scissors';
+        return 'you win! rock beats scissors';
     }
     else if (playerSelection == 'paper' && computerSelection == 'rock'){
         return 'you win! paper beats rock';
@@ -55,7 +57,37 @@ function playRound(playerSelection, computerSelection){
 
 console.log(playRound(playerSelection, computerSelection));
 
+let statement = playRound(playerSelection, computerSelection); 
+statement = statement.substring(0, 5);
+
+function scoreBoard () {
+    if(statement == 'you w'){
+        return playerPoints += 1;
+    }
+    else if(statement == 'you l'){
+        return computerPoints += 1;
+    }
+    else {
+        return;
+    }
+}
+
+scoreBoard();
+
+console.log(`your score: ${playerPoints} computer score: ${computerPoints}`);
+
+
 }
 }
 
 game();
+
+if (playerPoints > computerPoints){
+    console.log('ur the weiner')
+}
+else if(playerPoints < computerPoints){
+    console.log('u lost u weiner')
+}
+else{
+    console.log('its a tie. you both suck')
+}
