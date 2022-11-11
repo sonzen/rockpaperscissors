@@ -145,6 +145,7 @@ function scoreBoard () {
 }
 scoreBoard();
 
+// award winning message to whoever wins. 
 if (playerPoints === 5){
     messages.textContent = 'GAME OVER. player wins.';
 }
